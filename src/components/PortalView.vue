@@ -41,6 +41,10 @@ export default defineComponent({
         path: '/tutorial-6',
         label: 'Tutorial 6: Form Builder',
       },
+      {
+        path: '/views',
+        label: 'Program',
+      },
     ];
 
     return {

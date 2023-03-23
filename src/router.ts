@@ -7,7 +7,7 @@ import PatientListV2 from './tutorials/tutorial_3/PatientList.vue';
 import { subRouts as T4Routes } from './tutorials/tutorial_4/subRouter';
 import { subRouts as T5Routes } from './tutorials/tutorial_5/subRouter';
 import { subRouts as T6Routes } from './tutorials/tutorial_6/subRouter';
-
+import Program from './views/Program.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -19,9 +19,11 @@ const routes = [
   ...T4Routes,
   ...T5Routes,
   ...T6Routes,
+  { path: '/views', name: 'Program', component: Program },
   { path: '/tutorial-7', redirect: '/coming-soon' },
   { path: '/tutorial-8', redirect: '/coming-soon' },
   { path: '/tutorial-9', redirect: '/coming-soon' },
+  { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFound },
   { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFound },
 ];
 
