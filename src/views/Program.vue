@@ -4,7 +4,7 @@
       <div class="title">轉診院所維護</div>
       <XButton display="button" theme="primary" outline>關閉</XButton>
     </header>
-
+    
     <body class="mainbody">
       <XTable
         :data="patientList"
@@ -51,9 +51,12 @@ import { useOpdInfo } from './composable/useOpdInfo';
 import { tableColSchema } from './utils/tableOptions';
 import PatientListCellState from './PatientListCellState.vue';
 import { toGenderText } from './utils/patientUtils';
+import { gethealthcareProviderList } from './composable/gethealthcareProviderList';
 
 const { roomInfo, userInfo, setSlot, setSubjectId, setDate } = useOpdInfo();
 const { patientList } = usePatientList(roomInfo);
+const { healthcareProviderList} = gethealthcareProviderList();
+console.log(healthcareProviderList)
 </script>
 
 <style>
